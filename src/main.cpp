@@ -234,13 +234,13 @@ void save_as(string temp,vector<string>lines){
     }
 }
 void vtof(vector<string>&lines){
-    ofstream fout("data/Tree_project/New folder/text_handling.txt",ios::out);
+    ofstream fout("data/log/text_handling.txt",ios::out);
     for(string i:lines){
         fout<<i<<endl;
     }
 }
 void copystr(){
-    bool f = system(("cd data/Tree_project/New folder && type text_handling.txt | clip"));
+    bool f = system(("cd data/log && type text_handling.txt | clip"));
 }
 vector<string> paste(){
     FILE* pipe = popen("powershell -command \"Get-Clipboard\"", "r");
